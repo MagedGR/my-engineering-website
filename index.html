@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Maged Engineering Services</title>
+  <title>N3M Public & Engineering Services</title>
   <style>
     body {
       margin: 0;
@@ -11,27 +11,28 @@
       scroll-behavior: smooth;
     }
 
-    /* Top-left logo + site title */
-    .top-left {
+    /* Top-left site title only */
+    .site-title-top {
       position: fixed;
       top: 10px;
       left: 20px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      font-size: 26px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
       z-index: 1002;
     }
+
+    /* Optional Logo (underneath the title) */
     .logo {
       font-size: 36px;
       font-weight: bold;
       color: #ffd700;
       text-shadow: 2px 2px 4px #000;
-    }
-    .site-title {
-      font-size: 22px;
-      font-weight: bold;
-      color: #fff;
-      text-shadow: 1px 1px 3px #000;
+      margin-left: 20px;
+      margin-top: 45px; /* pushes logo under title */
+      position: fixed;
+      z-index: 1001;
     }
 
     /* Language selector */
@@ -139,11 +140,11 @@
 </head>
 <body>
 
-  <!-- Top-left Logo + Title -->
-  <div class="top-left">
-    <div class="logo">N3M</div>
-    <div class="site-title">Maged Engineering Services</div>
-  </div>
+  <!-- Site Title Top-left -->
+  <div class="site-title-top">N3M Public & Engineering Services</div>
+
+  <!-- Logo (under title) -->
+  <div class="logo">N3M</div>
 
   <!-- Language Selector -->
   <div class="language">
@@ -163,7 +164,7 @@
 
   <!-- Home Section -->
   <section id="home" style="background-image: url('images/home.jpg');">
-    <h1>Maged Engineering Services</h1>
+    <h1>Welcome to N3M Public & Engineering Services</h1>
     <p>Expert in Solar Load Estimation • Generator Backup Design • Embedded STM32 Solutions</p>
     <a href="#services" class="btn">Explore Services</a>
   </section>
@@ -182,14 +183,13 @@
   <section id="about" style="background-image: url('images/about.jpg');">
     <h2>About Us</h2>
     <p>We are a team of professionals specializing in electrical engineering, project estimation, and integrated technical services. By combining our expertise, we deliver accurate, cost-effective, and reliable solutions tailored to diverse project requirements.</p>
-    <p>Our services include:</p>
     <ul>
       <li>Electrical design and estimation for residential, commercial, and industrial projects.</li>
-      <li>Energy solutions, including estimation and selection of solar energy systems and generators of all types to ensure efficiency, sustainability, and reliability.</li>
-      <li>Internet-based services and general technical works, supporting businesses and individuals with versatile solutions.</li>
-      <li>Embedded systems programming (STM32) and full-stack development (front-end and back-end) to create complete, innovative hardware–software integrations.</li>
+      <li>Energy solutions: solar energy systems and generators for efficiency & sustainability.</li>
+      <li>Internet-based services and general technical works.</li>
+      <li>Embedded systems programming (STM32) and full-stack development.</li>
     </ul>
-    <p>As a team, we believe in collaboration, innovation, and professionalism. Our goal is to provide comprehensive services that not only meet technical standards but also add value to our clients’ projects through sustainable and future-ready solutions.</p>
+    <p>We believe in collaboration, innovation, and professionalism to add long-term value to client projects.</p>
   </section>
 
   <!-- Contact Section -->
@@ -209,7 +209,7 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Maged Garas | Engineering Services</p>
+    <p>&copy; 2025 Maged Garas | N3M Public & Engineering Services</p>
   </footer>
 
 </body>
