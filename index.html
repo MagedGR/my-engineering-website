@@ -1,109 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<meta name="google-site-verification" content="aai0ITyXNNh5JsLILHTFsRAFj0mIRpXT337EuUK0sjs" />
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-  <title>N3M Public & Engineering Services | Electrical Design & Estimation</title>
-  <meta name="description" content="N3M Public & Engineering Services — Professional electrical engineering services. Solar load estimation, generator backup design, embedded STM32 systems, full-stack engineering apps (Montreal, Canada)." />
-  <meta name="keywords" content="Electrical Engineering, Solar Energy, Load Estimation, Generator Backup, STM32, Embedded Systems, P.Eng, Montreal, Canada" />
-  <meta name="author" content="Maged Garas" />
-  <link rel="canonical" href="https://MagedGR.github.io/my-engineering-website/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="N3M Public & Engineering Services" />
-  <meta property="og:description" content="Electrical engineering, solar sizing, generator design, STM32 embedded systems and full-stack solutions." />
-  <meta property="og:image" content="https://MagedGR.github.io/my-engineering-website/home.jpg" />
-  <meta property="og:url" content="https://MagedGR.github.io/my-engineering-website/" />
-  <meta property="og:type" content="website" />
-
+  <meta charset="UTF-8">
+  <title>Maged Engineering Services</title>
   <style>
-    body { margin:0; font-family: Arial, sans-serif; color:#fff; scroll-behavior:smooth; }
-    nav { position:fixed; top:0; width:100%; background:rgba(0,0,0,0.75); padding:10px 0; z-index:1000; }
-    nav ul { list-style:none; display:flex; justify-content:center; gap:24px; margin:0; padding:0; }
-    nav a { color:#fff; text-decoration:none; font-weight:600; }
-    nav a:hover { color:#ffd700; }
-    section { min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:72px 20px; background-size:cover; background-position:center; position:relative; }
-    section::before { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.45); z-index:1; }
-    section > * { position:relative; z-index:2; max-width:1100px; }
-    h1,h2 { margin:0 0 18px 0; line-height:1.15; }
-    p { margin:8px 0 12px 0; font-size:1.05rem; }
-    .btn { display:inline-block; padding:12px 22px; background:#ffd700; color:#000; border-radius:6px; font-weight:700; text-decoration:none; margin-top:18px; }
-    footer { background:#000; color:#fff; text-align:center; padding:18px 10px; }
-    ul.services-list { text-align:left; display:inline-block; margin-top:12px; font-size:1rem; }
-    iframe { width:100%; max-width:1100px; height:420px; border:0; margin-top:18px; }
-    @media (max-width:720px) { nav ul { gap:12px; } section { padding:56px 12px; } iframe { height:320px; } }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+
+    /* Logo */
+    .logo {
+      position: fixed;
+      top: 10px;
+      left: 20px;
+      font-size: 36px;
+      font-weight: bold;
+      color: #ffd700;
+      text-shadow: 2px 2px 4px #000;
+      z-index: 1002;
+    }
+
+    /* Language selector */
+    .language {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1002;
+      background: rgba(0,0,0,0.6);
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .language select {
+      font-size: 16px;
+      background: transparent;
+      color: #fff;
+      border: 1px solid #ffd700;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    /* Vertical nav */
+    nav {
+      position: fixed;
+      top: 100px;
+      left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 1001;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      background: rgba(0,0,0,0.5);
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-align: center;
+      width: 120px;
+    }
+
+    nav a:hover {
+      background: #ffd700;
+      color: #000;
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    section > * {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1, h2 {
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: #ffd700;
+      color: #000;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #ffae00;
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
+  <!-- Logo -->
+  <div class="logo">N3M</div>
+
+  <!-- Language Selector -->
+  <div class="language">
+    <select>
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+    </select>
+  </div>
+
+  <!-- Navigation -->
   <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- HOME -->
-  <section id="home" style="background-image:url('home.jpg');">
-    <div>
-      <h1>N3M Public & Engineering Services</h1>
-      <p>Professional electrical engineering, solar load estimation, generator backup design, and STM32 embedded systems.</p>
-      <a class="btn" href="#services">See Services</a>
-    </div>
+  <!-- Home Section -->
+  <section id="home" style="background-image: url('images/home.jpg');">
+    <h1>Maged Engineering Services</h1>
+    <p>Expert in Solar Load Estimation • Generator Backup Design • Embedded STM32 Solutions</p>
+    <a href="#services" class="btn">Explore Services</a>
   </section>
 
-  <!-- SERVICES -->
-  <section id="services" style="background-image:url('services.jpg');">
-    <div>
-      <h2>Our Services</h2>
-      <p>We provide accurate, cost-effective, reliable engineering solutions.</p>
-      <ul class="services-list">
-        <li>• Electrical design & estimation for residential, commercial, industrial projects</li>
-        <li>• Solar energy systems: estimation, panel & inverter sizing, battery sizing</li>
-        <li>• Generator backup design and load distribution</li>
-        <li>• Embedded systems (STM32) and full-stack engineering software</li>
-      </ul>
-    </div>
+  <!-- Services Section -->
+  <section id="services" style="background-image: url('images/services.jpg');">
+    <h2>Our Services</h2>
+    <p>✔ Solar Load Estimation (panels, inverters, batteries)<br>
+       ✔ Generator Backup Design with optimized load distribution<br>
+       ✔ Embedded Systems Development using STM32 controllers<br>
+       ✔ Front-end and Back-end Web Development<br>
+       ✔ Electrical Engineering Consultation & Estimation</p>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" style="background-image:url('about.jpg');">
-    <div>
-      <h2>About Us</h2>
-      <p>We are a team of professionals specializing in electrical engineering, project estimation, and integrated technical services. By combining our expertise, we deliver accurate, cost-effective, and reliable solutions tailored to diverse project requirements.</p>
-      <p><strong>Core capabilities:</strong></p>
-      <ul class="services-list">
-        <li>• Electrical design and estimation for residential, commercial, and industrial projects</li>
-        <li>• Energy solutions — solar energy systems and generator selection</li>
-        <li>• Internet-based technical services and general technical works</li>
-        <li>• Embedded systems programming (STM32) and full-stack development</li>
-      </ul>
-      <p>We focus on collaboration, innovation, and professional delivery to add long-term value to client projects.</p>
-    </div>
+  <!-- About Section -->
+  <section id="about" style="background-image: url('images/about.jpg');">
+    <h2>About Us</h2>
+    <p>We are a team of professionals specializing in electrical engineering, project estimation, and integrated technical services. By combining our expertise, we deliver accurate, cost-effective, and reliable solutions tailored to diverse project requirements.</p>
+    <p>Our services include:</p>
+    <ul>
+      <li>Electrical design and estimation for residential, commercial, and industrial projects.</li>
+      <li>Energy solutions, including estimation and selection of solar energy systems and generators of all types to ensure efficiency, sustainability, and reliability.</li>
+      <li>Internet-based services and general technical works, supporting businesses and individuals with versatile solutions.</li>
+      <li>Embedded systems programming (STM32) and full-stack development (front-end and back-end) to create complete, innovative hardware–software integrations.</li>
+    </ul>
+    <p>As a team, we believe in collaboration, innovation, and professionalism. Our goal is to provide comprehensive services that not only meet technical standards but also add value to our clients’ projects through sustainable and future-ready solutions.</p>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" style="background-image:url('contact.jpg');">
-    <div>
-      <h2>Contact</h2>
-      <p><strong>Email:</strong> <a href="mailto:magedguirgis2018@gmail.com" style="color:#ffd700;">magedguirgis2018@gmail.com</a></p>
-      <p><strong>Phone:</strong> +1 (438) 864-4422</p>
-      <p><strong>Address:</strong> H9K 1K4, Pierrefonds, QC, Canada</p>
+  <!-- Contact Section -->
+  <section id="contact" style="background-image: url('images/contact.jpg');">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:magedguirgis2018@gmail.com" style="color:#ffd700;">magedguirgis2018@gmail.com</a></p>
+    <p><strong>Phone:</strong> 438-864-4422</p>
+    <p><strong>Address:</strong> H9K 1K4, Pierrefonds, QC</p>
+    <a href="mailto:magedguirgis2018@gmail.com" class="btn">Send Email</a>
 
-      <!-- Google Maps -->
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.981291229156!2d-73.8787!3d45.4834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc93da238b1df6b%3A0x2f7c1d59cd1870ed!2sPierrefonds%2C%20Montreal%2C%20QC!5e0!3m2!1sen!2sca!4v1694469623456"
-        allowfullscreen="" loading="lazy"></iframe>
-    </div>
+    <!-- Google Maps Embed -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.981291229156!2d-73.8787!3d45.4834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc93da238b1df6b%3A0x2f7c1d59cd1870ed!2sPierrefonds%2C%20Montreal%2C%20QC!5e0!3m2!1sen!2sca!4v1694469623456"
+      allowfullscreen="" loading="lazy">
+    </iframe>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Maged Garas | N3M Public & Engineering Services</p>
+    <p>&copy; 2025 Maged Garas | Engineering Services</p>
   </footer>
 
 </body>
