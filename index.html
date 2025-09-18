@@ -11,16 +11,27 @@
       scroll-behavior: smooth;
     }
 
-    /* Logo */
-    .logo {
+    /* Top-left logo + site title */
+    .top-left {
       position: fixed;
       top: 10px;
       left: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1002;
+    }
+    .logo {
       font-size: 36px;
       font-weight: bold;
       color: #ffd700;
       text-shadow: 2px 2px 4px #000;
-      z-index: 1002;
+    }
+    .site-title {
+      font-size: 22px;
+      font-weight: bold;
+      color: #fff;
+      text-shadow: 1px 1px 3px #000;
     }
 
     /* Language selector */
@@ -33,7 +44,6 @@
       padding: 5px 10px;
       border-radius: 5px;
     }
-
     .language select {
       font-size: 16px;
       background: transparent;
@@ -53,7 +63,6 @@
       gap: 20px;
       z-index: 1001;
     }
-
     nav a {
       text-decoration: none;
       color: #fff;
@@ -62,9 +71,8 @@
       padding: 8px 12px;
       border-radius: 5px;
       text-align: center;
-      width: 120px;
+      width: 150px;
     }
-
     nav a:hover {
       background: #ffd700;
       color: #000;
@@ -83,7 +91,6 @@
       background-position: center;
       position: relative;
     }
-
     section::before {
       content: "";
       position: absolute;
@@ -92,7 +99,6 @@
       background: rgba(0,0,0,0.5);
       z-index: 1;
     }
-
     section > * {
       position: relative;
       z-index: 2;
@@ -112,7 +118,6 @@
       margin-top: 20px;
       font-weight: bold;
     }
-
     .btn:hover {
       background: #ffae00;
     }
@@ -134,8 +139,11 @@
 </head>
 <body>
 
-  <!-- Logo -->
-  <div class="logo">N3M</div>
+  <!-- Top-left Logo + Title -->
+  <div class="top-left">
+    <div class="logo">N3M</div>
+    <div class="site-title">Maged Engineering Services</div>
+  </div>
 
   <!-- Language Selector -->
   <div class="language">
