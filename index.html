@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Maged Engineering Services</title>
+  <title>N3M Public & Engineering Services</title>
   <style>
     body {
       margin: 0;
@@ -11,7 +11,7 @@
       scroll-behavior: smooth;
     }
 
-    /* Top-left logo + site title */
+    /* Top-left logo + title */
     .top-left {
       position: fixed;
       top: 10px;
@@ -21,34 +21,14 @@
       gap: 10px;
       z-index: 1002;
     }
-    .logo img {
+    .top-left img {
       height: 50px;
-      width: auto;
     }
     .site-title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: bold;
       color: #fff;
       text-shadow: 1px 1px 3px #000;
-    }
-
-    /* Language selector */
-    .language {
-      position: fixed;
-      top: 15px;
-      right: 20px;
-      z-index: 1002;
-      background: rgba(0,0,0,0.6);
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-    .language select {
-      font-size: 16px;
-      background: transparent;
-      color: #fff;
-      border: 1px solid #ffd700;
-      padding: 2px 5px;
-      border-radius: 3px;
     }
 
     /* Vertical nav */
@@ -79,12 +59,6 @@
     /* Sections */
     section {
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 60px 20px;
       background-size: cover;
       background-position: center;
       position: relative;
@@ -92,8 +66,7 @@
     section::before {
       content: "";
       position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
+      inset: 0;
       background: rgba(0,0,0,0.5);
       z-index: 1;
     }
@@ -102,36 +75,11 @@
       z-index: 2;
     }
 
-    h1, h2 {
-      margin-bottom: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 12px 24px;
-      background: #ffd700;
-      color: #000;
-      text-decoration: none;
-      border-radius: 5px;
-      margin-top: 20px;
-      font-weight: bold;
-    }
-    .btn:hover {
-      background: #ffae00;
-    }
-
     footer {
       background: #000;
       color: #fff;
       text-align: center;
       padding: 20px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 400px;
-      border: none;
-      margin-top: 20px;
     }
   </style>
 </head>
@@ -139,18 +87,8 @@
 
   <!-- Top-left Logo + Title -->
   <div class="top-left">
-    <div class="logo">
-      <img src="images/logo-transparent-png.png" alt="Maged Logo">
-    </div>
-    <div class="site-title">Maged Engineering Services</div>
-  </div>
-
-  <!-- Language Selector -->
-  <div class="language">
-    <select>
-      <option value="en">EN</option>
-      <option value="fr">FR</option>
-    </select>
+    <img src="logo-transparent-png.png" alt="Logo">
+    <div class="site-title">N3M Public & Engineering Services</div>
   </div>
 
   <!-- Navigation -->
@@ -162,54 +100,20 @@
   </nav>
 
   <!-- Home Section -->
-  <section id="home" style="background-image: url('images/home.jpg');">
-    <h1>Maged Engineering Services</h1>
-    <p>Expert in Solar Load Estimation • Generator Backup Design • Embedded STM32 Solutions</p>
-    <a href="#services" class="btn">Explore Services</a>
-  </section>
+  <section id="home" style="background-image: url('home.jpg');"></section>
 
   <!-- Services Section -->
-  <section id="services" style="background-image: url('images/services.jpg');">
-    <h2>Our Services</h2>
-    <p>✔ Solar Load Estimation (panels, inverters, batteries)<br>
-       ✔ Generator Backup Design with optimized load distribution<br>
-       ✔ Embedded Systems Development using STM32 controllers<br>
-       ✔ Front-end and Back-end Web Development<br>
-       ✔ Electrical Engineering Consultation & Estimation</p>
-  </section>
+  <section id="services" style="background-image: url('services.jpg');"></section>
 
   <!-- About Section -->
-  <section id="about" style="background-image: url('images/about.jpg');">
-    <h2>About Us</h2>
-    <p>We are a team of professionals specializing in electrical engineering, project estimation, and integrated technical services. By combining our expertise, we deliver accurate, cost-effective, and reliable solutions tailored to diverse project requirements.</p>
-    <p>Our services include:</p>
-    <ul>
-      <li>Electrical design and estimation for residential, commercial, and industrial projects.</li>
-      <li>Energy solutions, including estimation and selection of solar energy systems and generators of all types to ensure efficiency, sustainability, and reliability.</li>
-      <li>Internet-based services and general technical works, supporting businesses and individuals with versatile solutions.</li>
-      <li>Embedded systems programming (STM32) and full-stack development (front-end and back-end) to create complete, innovative hardware–software integrations.</li>
-    </ul>
-    <p>As a team, we believe in collaboration, innovation, and professionalism. Our goal is to provide comprehensive services that not only meet technical standards but also add value to our clients’ projects through sustainable and future-ready solutions.</p>
-  </section>
+  <section id="about" style="background-image: url('about.jpg');"></section>
 
   <!-- Contact Section -->
-  <section id="contact" style="background-image: url('images/contact.jpg');">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> <a href="mailto:magedguirgis2018@gmail.com" style="color:#ffd700;">magedguirgis2018@gmail.com</a></p>
-    <p><strong>Phone:</strong> 438-864-4422</p>
-    <p><strong>Address:</strong> H9K 1K4, Pierrefonds, QC</p>
-    <a href="mailto:magedguirgis2018@gmail.com" class="btn">Send Email</a>
-
-    <!-- Google Maps Embed -->
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2794.981291229156!2d-73.8787!3d45.4834!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc93da238b1df6b%3A0x2f7c1d59cd1870ed!2sPierrefonds%2C%20Montreal%2C%20QC!5e0!3m2!1sen!2sca!4v1694469623456"
-      allowfullscreen="" loading="lazy">
-    </iframe>
-  </section>
+  <section id="contact" style="background-image: url('contact.jpg');"></section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Maged Garas | Engineering Services</p>
+    <p>&copy; 2025 N3M Public & Engineering Services</p>
   </footer>
 
 </body>
